@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Monitoring</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Air Quality Monitoring</h1>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchBtn">Search</button>
+
+        <div class="air-quality">
+            <h2 id="location">📍 Location</h2>
+            <p>AQI: <span id="aqi">--</span></p>
+            <p>Status: <span id="aqi-status">--</span></p>
+            <p id="oxygen">O₂: --</p>
+            <p id="nitrogen">NO₂: --</p>
+            <p id="pm10">PM10: --</p>
+            <p id="pm2_5">PM2.5: --</p>
+            <p id="temperature">🌡️ Temperature: --</p>
+            <p id="humidity">💧 Humidity: --</p>
+            <p id="weather-condition">🌧️🌈 Condition: --</p>
+            <p id="wind">🌬️ Wind Speed: --</p>
+            <p id="pressure">🌡️ Pressure: --</p>
+            <p id="uv-index">☀️ UV Index: --</p>
+        </div>
+
+        <div id="map"></div>
+
+        <div id="right-section">
+            <h2>Live Location AQI</h2>
+            <p id="live-location">Live Location: --</p>
+            <p id="live-aqi">AQI: --</p>
+            <p id="live-aqi-status">Status: --</p>
+        </div>
+
+        <div id="left-section">
+            <canvas id="aqiChart" class="chart-container"></canvas>
+            <canvas id="humidityChart" class="chart-container"></canvas>
+        </div>
+    </div>
+
+    <footer>
+        DESIGN BY SUPESH PATIL
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
